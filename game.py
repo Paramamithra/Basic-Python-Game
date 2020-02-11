@@ -93,9 +93,9 @@ while not game_over:
 			x = player_pos[0]
 			y = player_pos[1]
 
-			if event.key == pygame.K_LEFT:
+			if event.key == pygame.K_LEFT and x>=player_size:
 				x -= player_size
-			elif event.key == pygame.K_RIGHT:
+			elif event.key == pygame.K_RIGHT and x<=WIDTH-2*player_size:
 				x += player_size
 
 			player_pos = [x,y]
